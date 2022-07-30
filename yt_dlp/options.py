@@ -465,7 +465,7 @@ def create_parser():
     network = optparse.OptionGroup(parser, 'Network Options')
     network.add_option(
         '--proxy', dest='proxy',
-        default=None, metavar='URL',
+        default=os.getenv('yt-dlp-proxy'), metavar='URL',
         help=(
             'Use the specified HTTP/HTTPS/SOCKS proxy. To enable SOCKS proxy, specify a proper scheme. '
             'Eg: socks5://user:pass@127.0.0.1:1080/. Pass in an empty string (--proxy "") for direct connection'))
